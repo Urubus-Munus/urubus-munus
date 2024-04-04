@@ -7,9 +7,9 @@ export class JobsImplementations implements JobsRepository {
     throw new Error('Method not implemented.');
   }
 
-  findAllJobs(): Promise<Job[]> {
+  async findAllJobs(): Promise<Job[]> {
     const jobs = fakeJobs;
 
-    return Promise.resolve(jobs);
+    return jobs;
   }
 }
