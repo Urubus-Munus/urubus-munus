@@ -6,7 +6,7 @@
   "scripts": {
     "test": "vitest",
     "start": "npm run build && node ./dist/app.js",
-    "dev": "tsx --env-file=.env ./src/app.ts",
+    "dev": "tsx --env-file=.env ./src/infra/server/app.ts",
     "build": "tsc"
   },
   "keywords": [],
@@ -15,7 +15,8 @@
   "dependencies": {
     "@discordjs/formatters": "^0.3.3",
     "@types/node-cron": "^3.0.11",
-    "discord.js": "^14.14.1",
+    "axios": "^1.6.8",
+    "discord.js": "^14.12.1",
     "node-cron": "^3.0.3",
     "tsx": "^4.7.1",
     "zod": "^3.22.4"
