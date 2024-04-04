@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2018", 
+    "target": "es2018",
     "module": "commonjs",
     "lib": ["es2018"],
     "strict": true,
@@ -13,7 +13,12 @@
     "resolveJsonModule": true,
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["./*"]
+      "@modules/*": ["./modules/*"],
+      "@shared/*": ["./shared/*"],
+      "@tests/*": ["./tests/*"],
+      "@env/*": ["./env/*"],
+      "@infra/*": ["./infra/*"],
+      "@functions/*": ["./functions/*"]
     }
   },
   "include": ["src/**/*.ts"],

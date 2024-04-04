@@ -1,6 +1,6 @@
-import { fakeJobs } from '@/data';
-import { JobsRepository } from '@/modules/jobs/repositories/contracts/Jobs.repository';
-import { Job } from '@/types/job';
+import { fakeJobs } from 'data';
+import { JobsRepository } from 'modules/jobs/repositories/contracts/Jobs.repository';
+import { Job } from 'types/job';
 
 export class InMemoryJobsRepository implements JobsRepository {
   findJobsByRole(): Promise<Job[]> {

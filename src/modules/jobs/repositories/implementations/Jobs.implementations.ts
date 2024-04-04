@@ -1,5 +1,5 @@
-import { fakeJobs } from '@/data';
-import { Job } from '@/types/job';
+import { fakeJobs } from 'data';
+import { Job } from 'types/job';
 import { JobsRepository } from '../contracts/Jobs.repository';
 
 export class JobsImplementations implements JobsRepository {

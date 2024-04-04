@@ -1,5 +1,5 @@
-import { InMemoryJobsRepository } from '@/tests/modules/jobs/repositories/InMemoryJobsRepository';
 import { error } from 'console';
+import { InMemoryJobsRepository } from 'tests/modules/jobs/repositories/InMemoryJobsRepository';
 import { describe, expect, it, onTestFailed } from 'vitest';
 import { FindAllJobs } from './fetchAllJobs.useCase';
 
