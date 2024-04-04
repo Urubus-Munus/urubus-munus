@@ -1,10 +1,10 @@
-import { InMemoryJobsImplementations } from '@/tests/modules/jobs/repositories/inMemoryJobsRepository';
+import { InMemoryJobsRepository } from '@/tests/modules/jobs/repositories/inMemoryJobsRepository';
 import { error } from 'console';
 import { describe, expect, it, onTestFailed } from 'vitest';
 import { FindAllJobs } from './fetchAllJobs.useCase';
 
 describe('Fetch All Jobs Use Case', () => {
-  const jobsRepository = new InMemoryJobsImplementations();
+  const jobsRepository = new InMemoryJobsRepository();
   const sut = new FindAllJobs(jobsRepository);
 
   it('Should return an array of jobs', async () => {
