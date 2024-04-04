@@ -6,7 +6,7 @@
   "scripts": {
     "test": "vitest",
     "start": "npm run build && node ./dist/app.js",
-    "dev": "tsx --env-file=.env ./src/infra/server/app.ts",
+    "dev": "tsx --env-file=.env ./src/infra/bot/app.ts",
     "build": "tsc"
   },
   "keywords": [],
