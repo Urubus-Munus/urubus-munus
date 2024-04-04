@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2018", 
+    "target": "es2018",
     "module": "commonjs",
     "lib": ["es2018"],
     "strict": true,
@@ -9,12 +9,17 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "rootDir": "./src",
     "resolveJsonModule": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@modules/*": ["src/modules/*"],
+      "@shared/*": ["src/shared/*"],
+      "@tests/*": ["src/tests/*"],
+      "@env/*": ["src/env/*"],
+      "@infra/*": ["src/infra/*"],
+      "@functions/*": ["src/functions/*"],
+    },
+    "types": ["vitest/globals", "node"]
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist"]

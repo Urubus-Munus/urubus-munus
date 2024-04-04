@@ -1,5 +1,5 @@
-import { env } from '@/env';
-import { findAllJobs } from '@/functions/findAllJobs';
+import { env } from '@env/index';
+import { findAllJobs } from '@functions/findAllJobs';
 import { discordClient } from '../discordClient/config';
 
 discordClient.login(env.TOKEN_BOT);

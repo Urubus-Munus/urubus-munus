@@ -1,5 +1,5 @@
-import { env } from '@/env';
-import { discordClient } from '@/infra/discordClient/config';
+import { env } from '@env/index';
+import { discordClient } from '@infra/discordClient/config';
 
 const isDevelopment: boolean = env.NODE_ENV === 'dev';
 
