@@ -1,4 +1,4 @@
-import { Job } from '@/types/job';
+import { Job } from 'src/types/job';
 
 export abstract class JobsRepository {
   abstract findAllJobs(): Promise<Job[]>;

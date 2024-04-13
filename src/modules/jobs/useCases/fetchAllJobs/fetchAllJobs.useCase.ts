@@ -1,5 +1,5 @@
-import { UseCase } from '@/shared/core/entities/useCase/UseCase';
-import { right } from '@/shared/core/errors/Either';
+import { UseCase } from '@shared/core/entities/useCase/UseCase';
+import { right } from '@shared/core/errors/Either';
 import { JobsRepository } from '../../repositories/contracts/Jobs.repository';
 import { OutputFindAllJobs } from './fetchAllJobs.dto';
 

@@ -3,6 +3,9 @@ import { discordChannel } from '@/utils/discordChannel';
 import { createTemplate } from '@/utils/discordTemplateBody';
 import { DMChannel, TextChannel } from 'discord.js';
 
+/**
+Asynchronously sends formatted job entries to a Discord channel with a delay between each message.
+ */
 export async function findAllJobs() {
   const jobs = await findAllJobsUseCase.execute();
   const response = jobs.value?.jobs;
@@ -11,13 +14,21 @@ export async function findAllJobs() {
     return;
   }
 
-  const bodyContent = response.map((job) => createTemplate(job)).join('\n\n');
-
   const channelDiscord = discordChannel();
   if (
     channelDiscord instanceof TextChannel ||
     channelDiscord instanceof DMChannel
   ) {
-    channelDiscord.send(bodyContent);
+    const DELAY_BETWEEN_MESSAGES = 5000;
+
+    let delay = 0;
+
+    response.forEach((job) => {
+      setTimeout(() => {
+        channelDiscord.send(createTemplate(job));
+      }, delay);
+
+      delay += DELAY_BETWEEN_MESSAGES;
+    });
   }
 }

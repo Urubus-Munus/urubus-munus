@@ -1,5 +1,5 @@
-import { Either } from '@/shared/core/errors/Either';
-import { Job } from '@/types/job';
+import { Either } from '@shared/core/errors/Either';
+import { Job } from 'src/types/job';
 
 export type OutputFindAllJobs = Either<
   null,
